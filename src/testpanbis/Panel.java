@@ -22,6 +22,10 @@ public class Panel extends JPanel {
         int xMiddle = this.getWidth() / 2;
         int yMiddle = this.getHeight() / 2;
 
+        // only used below in comments to show where xMax and yMax is
+        final int xMax = this.getWidth();
+        final int yMax = this.getHeight();
+
         // if (rectangle == true) is the same as if (rectangle)
         if (rectangle) {
             final int x = xMiddle - (xMiddle / 2);
