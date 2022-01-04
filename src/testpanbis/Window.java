@@ -1,7 +1,5 @@
 package testpanbis;
 
-import org.jetbrains.annotations.NotNull;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -53,7 +51,7 @@ public class Window extends JFrame implements ActionListener {
      *
      * @param e Action event (data from the component that called the callback)
      */
-    public void actionPerformed(@NotNull ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnRectangle) panel.setRectangle();
         if (e.getSource() == btnOval) panel.setOvale();
         if (e.getSource() == btnTriangle) panel.setTriangle();
