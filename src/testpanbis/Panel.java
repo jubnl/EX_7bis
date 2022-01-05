@@ -37,7 +37,7 @@ public class Panel extends JPanel {
 
             // point xy = starting point
 
-            //                                              xMiddle
+            //                                               xMiddle
             // ------------------------x--------------------------------------------------------------------------- xMax (positive)
             /** 0,0
              *
@@ -71,7 +71,7 @@ public class Panel extends JPanel {
 
             g.fillOval(x, y, width, height);
 
-            //                                              xMiddle
+            //                                               xMiddle
             // ------------------------x--------------------------------------------------------------------------- xMax (positive)
             /** 0,0
              *
@@ -110,7 +110,7 @@ public class Panel extends JPanel {
             y[0] = y[2] = yMiddle + (yMiddle / 2);
             y[1] = yMiddle - (yMiddle / 2);
 
-            //                                    xMiddle
+            //                                               xMiddle
             // ------------------------x0-----------------------x1-----------------------x2------------------------ xMax (positive)
             /** 0,0
              *
