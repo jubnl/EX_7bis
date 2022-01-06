@@ -51,8 +51,6 @@ public class Panel extends JPanel {
         int xMiddle = this.getWidth() / 2;
         int yMiddle = this.getHeight() / 2;
 
-        // if (rectangle == true) is the same as if (rectangle)
-
         switch (this.formName) {
             case "RECTANGLE" -> makeRectOval(g, xMiddle, yMiddle, false);
             case "OVALE" -> makeRectOval(g, xMiddle, yMiddle, true);
