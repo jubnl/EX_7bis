@@ -6,9 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Window extends JFrame implements ActionListener {
-    // declare buttons and a panel
-    JButton btnRectangle, btnOval, btnTriangle, btnReset;
-    Panel panel;
+    private final Panel panel;
 
     public Window() {
 
@@ -29,20 +27,20 @@ public class Window extends JFrame implements ActionListener {
 
         // define buttons (set text, position and subscribe to a listener bound to THIS class instance (see actionPerformed below)
         // Watch out, this class must implement ActionListener to work since we use that
-        btnRectangle = new JButton("RECTANGLE");
+        // declare buttons and a panel
+        JButton btnRectangle = new JButton("RECTANGLE");
+        JButton btnOval = new JButton("OVALE");
+        JButton btnTriangle = new JButton("TRIANGLE");
+        JButton btnReset = new JButton("RESET");
+
         content.add(btnRectangle, "North");
-        btnRectangle.addActionListener(this);
-
-        btnOval = new JButton("OVALE");
         content.add(btnOval, "East");
-        btnOval.addActionListener(this);
-
-        btnTriangle = new JButton("TRIANGLE");
         content.add(btnTriangle, "West");
-        btnTriangle.addActionListener(this);
-
-        btnReset = new JButton("RESET");
         content.add(btnReset, "South");
+
+        btnRectangle.addActionListener(this);
+        btnOval.addActionListener(this);
+        btnTriangle.addActionListener(this);
         btnReset.addActionListener(this);
     }
 
@@ -52,12 +50,7 @@ public class Window extends JFrame implements ActionListener {
      * @param e Action event (data from the component that called the callback)
      */
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnRectangle) panel.setRectangle();
-        if (e.getSource() == btnOval) panel.setOvale();
-        if (e.getSource() == btnTriangle) panel.setTriangle();
-        if (e.getSource() == btnReset) panel.setReset();
-
-        // call JPanel.paintComponent() (panel.paintComponent(Graphic g) in the Panel class)
+        panel.setNewForm(e.getActionCommand());
         panel.repaint();
     }
 }
