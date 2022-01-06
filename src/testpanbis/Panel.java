@@ -19,12 +19,9 @@ public class Panel extends JPanel {
 
     private void makeTriangle(Graphics g, int xMiddle, int yMiddle) {
         final int n = 3;
-        int[] x = new int[n];
+        int[] x = new int[]{xMiddle - (xMiddle / 2), xMiddle, xMiddle + (xMiddle / 2)};
         int[] y = new int[n];
 
-        x[0] = xMiddle - (xMiddle / 2);
-        x[1] = xMiddle;
-        x[2] = xMiddle + (xMiddle / 2);
         y[0] = y[2] = yMiddle + (yMiddle / 2);
         y[1] = yMiddle - (yMiddle / 2);
         g.fillPolygon(x, y, n);
@@ -41,7 +38,7 @@ public class Panel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
-        // call parent class
+        // call parent
         super.paintComponent(g);
 
         // define drawing color
